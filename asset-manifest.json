@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dark_Light_Mode_Template/static/css/main.b853ced3.css",
+    "main.js": "/Dark_Light_Mode_Template/static/js/main.a2bb0c77.js",
+    "static/media/React_dark.svg": "/Dark_Light_Mode_Template/static/media/React_dark.7cf93eb943e42f0b066e.svg",
+    "static/media/React_light.svg": "/Dark_Light_Mode_Template/static/media/React_light.656918db88a1d9af5b76.svg",
+    "index.html": "/Dark_Light_Mode_Template/index.html",
+    "main.b853ced3.css.map": "/Dark_Light_Mode_Template/static/css/main.b853ced3.css.map",
+    "main.a2bb0c77.js.map": "/Dark_Light_Mode_Template/static/js/main.a2bb0c77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b853ced3.css",
+    "static/js/main.a2bb0c77.js"
+  ]
+}

@@ -1,13 +1,153 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root[color-mode="light"] {
+  --background-primary: #ffffff;
+  --background-secondary: #ffffff;
+  --element-primary: #2b283a;
+  --elementInverse: #ffffff;
+  --primary: #2b283a;
+  --secondary: #61dafb;
+  --tertiary: #918e9b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root[color-mode="dark"] {
+  --background-primary: #21222a;
+  --background-secondary: #21222a;
+  --element-primary: #f5f5f5;
+  --elementInverse: #000000;
+  --primary: #f5f5f5;
+  --secondary: #61dafb;
+  --tertiary: #d5d4d8;
+}
+
+html {
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* To hide elements in light mode */
+:root[color-mode="light"] .light--hidden {
+  display: none;
+}
+
+/* To hide elements in dark mode */
+:root[color-mode="dark"] .dark--hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* NAV styles */
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-secondary);
+  padding: 30px 25px;
+  height: 60px;
+  box-shadow: 0px 1px 4px var(--tertiary);
+  z-index: 1;
+}
+
+.nav-logo_icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.nav-logo_text {
+  color: var(--secondary);
+  margin-right: auto;
+}
+
+.toggler {
+  display: flex;
+  align-items: center;
+  color: var(--tertiary);
+}
+
+.toggler p {
+  font-size: 0.625rem;
+  font-weight: 600;
+}
+
+.toggler-slider {
+  width: 25px;
+  height: 13px;
+  background-color: var(--element-primary);
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid var(--primary);
+  box-sizing: content-box;
+}
+
+.toggler-slider-circle {
+  height: 13px;
+  width: 13px;
+  background-color: var(--elementInverse);
+  border-radius: 50%;
+}
+
+:root[color-mode="dark"] .toggler-slider {
+  justify-content: flex-end;
+}
+
+/* MAIN styles */
+main {
+  padding: 57px 27px;
+  background-image: url("./assets/React_light.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: var(--background-primary);
+  color: var(--primary);
+}
+
+:root[color-mode="dark"] main {
+  background-image: url("./assets/React_dark.svg");
+}
+
+.main-title {
+  margin: 0;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.main-facts {
+  margin-top: 46px;
+}
+
+.main-facts > li {
+  font-size: 1.2rem;
+  padding-block: 10px;
+}
+
+.main-facts > li::marker {
+  font-size: 1.4rem;
+  color: var(--secondary);
 }
